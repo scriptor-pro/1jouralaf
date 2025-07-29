@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organiseur journalier (énergie limitée)</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 1em; background: #fdf6e3; colour: #333; }
+    h1 { text-align: center; }
+    label, input, select { display: block; margin-top: 0.5em; }
+    .task { border: 1px solid #ccc; padding: 1em; margin-top: 1em; background: #fff; }
+    button { margin-top: 1em; }
+    .selected { background: #e0ffe0; border-colour: #4caf50; }
+  </style>
+</head>
+<body>
+  <h1>Organiseur journalier</h1>
+
+  <div>
+    <label for="taskName">Tâche :</label>
+    <input type="text" id="taskName">
+
+    <label for="urgency">Urgence (1-10) :</label>
+    <input type="number" id="urgency" min="1" max="10">
+
+    <label for="importance">Importance (1-10) :</label>
+    <input type="number" id="importance" min="1" max="10">
+
+    <label for="energy">Énergie requise (1-12) :</label>
+    <input type="number" id="energy" min="1" max="12">
+
+    <button onclick="addTask()">Ajouter la tâche</button>
+  </div>
+
+  <h2>Tâches ajoutées</h2>
+  <div id="taskList"></div>
+
+  <button onclick="calculatePlan()">Générer le plan optimal</button>
+  <h2>Plan sélectionné</h2>
+  <div id="selectedTasks"></div>
+
+  <script>
+    const tasks = [];
+
+    function addTask() {
+      const name = document.getElementById('taskName').value;
+      const urgency = parseInt(document.getElementById('urgency').value);
+      const importance = parseInt(document.getElementById('importance').value);
+      const energy = parseInt(document.getElementById('energy').value);
+
+      if (!name || isNaN(urgency) || isNaN(importance) || isNaN(energy)) return;
+
+      const score = (2 * importance + urgency) / energy;
+      const task = { name, urgency, importance, energy, score };
+      tasks.push(task);
+      displayTasks();
+    }
+
+    function displayTasks() {
+      const container = document.getElementById('taskList');
+      container.innerHTML = '';
+      tasks.forEach((task, i) => {
+        container.innerHTML += `
+          <div class="task">
+            <strong>${task.name}</strong><br>
+            Urgence: ${task.urgency}, Importance: ${task.importance}, Énergie: ${task.energy}<br>
+            Score: ${task.score.toFixed(2)}
+          </div>`;
+      });
+    }
+
+    function calculatePlan() {
+      let energyBudget = 12;
+      const sorted = [...tasks].sort((a, b) => b.score - a.score);
+      const selected = [];
+
+      for (const task of sorted) {
+        if (task.energy <= energyBudget) {
+          selected.push(task);
+          energyBudget -= task.energy;
+        }
+      }
+
+      const output = document.getElementById('selectedTasks');
+      output.innerHTML = '';
+      selected.forEach(task => {
+        output.innerHTML += `<div class="task selected">
+          <strong>${task.name}</strong><br>
+          Urgence: ${task.urgency}, Importance: ${task.importance}, Énergie: ${task.energy}<br>
+          Score: ${task.score.toFixed(2)}
+        </div>`;
+      });
+    }
+  </script>
+</body>
+</html>
