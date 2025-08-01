@@ -1,0 +1,216 @@
+/* ========== RESET & BASE ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #111;
+  padding: 1rem;
+}
+
+/* ========== ACCESSIBILITÉ ========== */
+:focus-visible {
+  outline: 2px solid #ff8800;
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  border-radius: 4px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ========== NAVIGATION PRINCIPALE ========== */
+nav[role="navigation"] {
+  background-color: #004466;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: -1rem -1rem 1rem -1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav li {
+  margin: 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav a:hover,
+.nav a:focus {
+  background-color: #006699;
+  outline: none;
+}
+
+.nav a[aria-current="page"] {
+  background-color: #0077cc;
+  text-decoration: none;
+}
+
+/* ========== CONTENU PRINCIPAL ========== */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  outline: none;
+}
+
+/* ========== FORMULAIRES TÂCHES ========== */
+.task-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.task-input label {
+  font-weight: bold;
+}
+
+.task-input input {
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+.task-button {
+  padding: 0.5rem;
+  background-color: #0058b0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.task-button:hover,
+.task-button:focus {
+  background-color: #004080;
+  outline: none;
+}
+
+/* ========== LISTE DES TÂCHES ========== */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-block {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  border-left: 4px solid #0077cc;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 0.6rem;
+}
+
+.time-label {
+  font-weight: bold;
+  min-width: 60px;
+  color: #333;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-task {
+  font-style: italic;
+  color: #666;
+}
+
+/* ========== FOCUS ========== */
+.focus-block {
+  padding: 2rem;
+  border-left: 5px solid #0077cc;
+  background-color: #f0f8ff;
+  border-radius: 6px;
+  margin-top: 1rem;
+  max-width: 500px;
+}
+
+.focus-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* ========== FORMULAIRE DE CONNEXION ========== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin-top: 2rem;
+}
+
+.login-form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.login-form button {
+  background-color: #0058b0;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #004080;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-input,
+  .task-block,
+  .focus-block,
+  main {
+    max-width: 100%;
+  }
+
+  body {
+    padding: 0.5rem;
+  }
+
+  nav[role="navigation"] {
+    margin: 0 0 1rem 0;
+  }
+}

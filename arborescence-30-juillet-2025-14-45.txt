@@ -1,0 +1,55 @@
+.
+├── arborescence2.txt
+├── arborescence-30-juillet-2025-14-45.txt
+├── arborescence.txt
+├── config
+│   └── env.js
+├── .env
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── routes
+│   └── auth.routes.js
+├── server.js
+├── services
+│   └── emailService.js
+├── src
+│   ├── App.jsx
+│   ├── App.tsx
+│   ├── components
+│   │   ├── AjouterTache.tsx
+│   │   ├── AjoutTache.jsx
+│   │   ├── ExportTachesCSV.tsx
+│   │   ├── FormulaireConnexion.tsx
+│   │   ├── FormulaireInscription.tsx
+│   │   ├── ImportTachesCSV.tsx
+│   │   ├── ListeTachesDuJour.jsx
+│   │   ├── NavigationAccessible.tsx
+│   │   ├── SliderEnergie.tsx
+│   │   ├── TachesEnRetard.jsx
+│   │   ├── TaskInput.js
+│   │   ├── TaskInput.jsx
+│   │   ├── TaskList.jsx
+│   │   └── TodayView.jsx
+│   ├── Jour.tsx
+│   ├── lib
+│   │   └── supabaseClient.js
+│   ├── main.jsx
+│   ├── main.tsx
+│   ├── pages
+│   │   ├── Ajout.tsx
+│   │   ├── Connection.tsx
+│   │   ├── GererTaches.tsx
+│   │   ├── Inscription.tsx
+│   │   ├── ResetPassword.jsx
+│   │   ├── TableauDeBord.tsx
+│   │   └── VueDuJour.jsx
+│   └── styles
+│       ├── global.css
+│       ├── tasks.css
+│       └── today.css
+├── utils
+│   └── token.js
+└── vite.config.js
+
+9 directories, 43 files

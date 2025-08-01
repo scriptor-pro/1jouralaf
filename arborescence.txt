@@ -1,0 +1,123 @@
+.
+├── arborescence.txt
+├── backburner
+│   ├── 1jouralaf-backend
+│   ├── _chatGPT
+│   │   └── index.html
+│   ├── Claude
+│   │   ├── index.html
+│   │   ├── package.json
+│   │   ├── public
+│   │   ├── src
+│   │   │   ├── App.tsx
+│   │   │   ├── components
+│   │   │   ├── hooks
+│   │   │   │   └── useTaskOptimizer.ts
+│   │   │   ├── main.tsx
+│   │   │   ├── pages
+│   │   │   │   └── accessibilityTheme.ts
+│   │   │   ├── styles
+│   │   │   │   ├── accessibilty.css
+│   │   │   │   └── global.css
+│   │   │   └── types
+│   │   │       └── index.ts
+│   │   ├── structure.txt
+│   │   ├── tsconfig.json
+│   │   ├── Untitled-1.ts
+│   │   ├── variables.css
+│   │   └── vite.config.ts
+│   ├── import-compatible.html
+│   ├── importer.html
+│   ├── inscription.html
+│   ├── mon-energie.html
+│   ├── mon-planning-neuro
+│   │   ├── css
+│   │   │   └── global.css
+│   │   ├── index.html
+│   │   ├── js
+│   │   │   ├── app.js
+│   │   │   └── views
+│   │   │       ├── focus.js
+│   │   │       ├── login.js
+│   │   │       └── today.js
+│   │   ├── mon-planning-neuro
+│   │   │   └── src
+│   │   │       └── styles
+│   │   ├── mon-planning-neuro-modifs-du-jour.zip
+│   │   ├── package.json
+│   │   ├── public
+│   │   │   └── index.html
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── App.jsx
+│   │   │   ├── App.tsx
+│   │   │   ├── components
+│   │   │   │   ├── AjouterTache.tsx
+│   │   │   │   ├── AjoutTache.jsx
+│   │   │   │   ├── ExportTachesCSV.tsx
+│   │   │   │   ├── FormulaireConnexion.tsx
+│   │   │   │   ├── FormulaireInscription.tsx
+│   │   │   │   ├── ImportTachesCSV.tsx
+│   │   │   │   ├── ListeTachesDuJour.jsx
+│   │   │   │   ├── NavigationAccessible.tsx
+│   │   │   │   ├── SliderEnergie.tsx
+│   │   │   │   ├── TachesEnRetard.jsx
+│   │   │   │   ├── TaskInput.js
+│   │   │   │   ├── TaskInput.jsx
+│   │   │   │   ├── TaskList.jsx
+│   │   │   │   └── TodayView.jsx
+│   │   │   ├── Jour.tsx
+│   │   │   ├── lib
+│   │   │   │   └── supabaseClient.js
+│   │   │   ├── main.jsx
+│   │   │   ├── main.tsx
+│   │   │   ├── pages
+│   │   │   │   ├── Ajout.tsx
+│   │   │   │   ├── Connection.tsx
+│   │   │   │   ├── GererTaches.tsx
+│   │   │   │   ├── Inscription.tsx
+│   │   │   │   ├── TableauDeBord.tsx
+│   │   │   │   └── VueDuJour.jsx
+│   │   │   └── styles
+│   │   │       ├── global.css
+│   │   │       ├── tasks.css
+│   │   │       └── today.css
+│   │   └── vite.config.js
+│   ├── mon-planning-neuro.zip
+│   ├── niveau-energie.html
+│   ├── planning.html
+│   ├── recup-mdp-brut.html
+│   ├── structure.txt
+│   ├── taches.html
+│   ├── take5
+│   │   ├── client_secret_285864269942-ifmlpugjhbrubg4vec3cc9qkdrj3t0f4.apps.googleusercontent.com.json
+│   │   └── index.html
+│   └── vanilla-sans-react
+│       ├── css
+│       │   └── global.css
+│       ├── index.html
+│       ├── js
+│       │   ├── app.js
+│       │   ├── components
+│       │   │   └── TaskInput.js
+│       │   └── views
+│       │       ├── focus.js
+│       │       ├── login.js
+│       │       ├── settings.js
+│       │       └── today.js
+│       └── README.md
+├── config
+│   └── env.js
+├── .env
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── routes
+│   └── auth.routes.js
+├── server.js
+├── services
+│   └── emailService.js
+└── utils
+    └── token.js
+
+34 directories, 86 files
