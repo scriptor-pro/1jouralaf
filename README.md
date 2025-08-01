@@ -1,5 +1,7 @@
 # 1 jour à la fois
 
+## Statut : work in progress, not functional yet
+
 🧠 Outil de planification quotidien conçu pour les personnes autistes, TDAH ou les deux.
 
 ## 🚀 Fonctionnalités principales
