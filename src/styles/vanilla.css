@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'Inter-UI';
+    src: url('../assets/Inter-UI-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-UI';
+    src: url('../assets/Inter-UI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-UI';
+    src: url('../assets/Inter-UI-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter-UI';
+    src: url('../assets/Inter-UI-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter-UI';
+    src: url('../assets/Inter-UI-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-UI';
+    src: url('../assets/Inter-UI-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter-UI';
+    src: url('../assets/Inter-UI-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-UI';
+    src: url('../assets/Inter-UI-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Reset de base */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-colour: #A8D0E6; /* Bleu pastel */
+    --secondary-colour: #B9E2C7; /* Vert pastel */
+    --accent-colour: #F9F5EB; /* Beige */
+    --background-colour: #F1F1F1; /* Gris clair pour le fond */
+    --text-colour: #1D3557; /* Bleu foncé */
+    --error-colour: #F4A261; /* Orange doux */
+    --success-colour: #2A7F62; /* Vert foncé */
+    --border-colour: #4B4F54; /* Gris foncé */
+    --button-bg-colour: #A8D0E6; /* Bleu pastel pour les boutons */
+    --button-text-colour: #fff; /* Texte des boutons en blanc */
+    --link-colour: #1D3557; /* Bleu foncé */
+    --link-colour-alt: #2A7F62; /* Vert foncé */
+}
+
+/* Typographie claire et lisible */
+body, input {
+    font-family: 'Inter-UI', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.55;
+    background-color: var(--background-colour);
+    color: var(--text-colour);
+    margin: 0;
+    padding: 0;
+    max-width: 75ch;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+h1 { font-size: 200%; color: var(--primary-colour); }
+h2 { font-size: 150%; color: var(--secondary-colour); }
+h3 { font-size: 120%; }
+h4, h5, h6 { font-size: 100%; }
+h5, h6 { text-transform: uppercase; }
+
+header h1 { border-bottom: 1px solid var(--border-colour); }
+
+a, a:visited {
+    color: var(--link-colour);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: var(--link-colour-alt);
+}
+
+/* Éléments de texte */
+strong, time, b { font-weight: bold; }
+em, dfn, i { font-style: italic; }
+sub { font-size: 60%; vertical-align: bottom; }
+small { font-size: 80%; }
+
+blockquote {
+    background: var(--secondary-colour);
+    border-left: 10px solid var(--primary-colour);
+    display: block;
+    font-family: "Georgia", serif;
+    padding: 1rem;
+}
+blockquote p:first-child { margin-top: 0; }
+blockquote p:last-child { margin-bottom: 0; }
+
+kbd, code, samp, pre, var { font-family: monospace; font-size: 1rem; }
+
+code, pre {
+    background: var(--accent-colour);
+    border: 1px solid var(--border-colour);
+    overflow: auto;
+    padding: 0.25rem 0.5rem;
+}
+code pre, pre code { border: 0; padding: 0; }
+
+/* Navigation */
+nav ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--link-colour);
+}
+
+nav a:hover {
+    color: var(--link-colour-alt);
+}
+
+/* Éléments généraux */
+hr {
+    background: var(--text-colour);
+    border: 0;
+    height: 1px;
+    margin: 4rem 0;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+figure {
+    border: 1px solid var(--primary-colour);
+    display: inline-block;
+    padding: 1rem;
+    width: 100%;
+}
+
+figure img {
+    margin: 0 auto;
+}
+
+figure figcaption {
+    font-size: 80%;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+ul, ol {
+    margin: 2rem 0;
+    padding: 0 0 0 2rem;
+}
+
+ul li, ol li {
+    margin-bottom: 1rem;
+}
+
+li > ul, li > ol {
+    margin: 0.25rem 0 0.5rem;
+    padding: 0 0 0 2rem;
+}
+
+li > ul li, li > ol li {
+    margin-bottom: 0.5rem;
+}
+
+dl dd {
+    padding-left: 2rem;
+}
+
+table {
+    border: 1px solid var(--primary-colour);
+    border-collapse: collapse;
+    table-layout: fixed;
+    text-align: left;
+    width: 100%;
+}
+
+table caption {
+    margin: 2rem 0;
+}
+
+table tr {
+    border-bottom: 1px solid var(--primary-colour);
+}
+
+table thead {
+    position: sticky;
+    top: 0;
+}
+
+table tbody tr:nth-child(even) {
+    background: var(--accent-colour);
+}
+
+table th {
+    background: var(--secondary-colour);
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 0.5rem;
+}
+
+/* Formulaires */
+input {
+    appearance: none;
+    border: 1px solid var(--text-colour);
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+}
+
+input:focus, input:active {
+    background-color: var(--secondary-colour);
+    border-color: var(--link-colour);
+}
+
+/* Mobile */
+@media screen and (max-width: 75ch) {
+    body, input {
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    table {
+        table-layout: auto;
+    }
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #191919;
+    }
+
+    input:focus, input:active {
+        background-color: var(--text-colour);
+        color: var(--secondary-colour);
+    }
+
+    table,
+    table tr,
+    table th:not(:last-of-type),
+    table td:not(:last-of-type) {
+        border-color: var(--text-colour);
+    }
+
+    table thead th,
+    table tfoot th {
+        background-color: var(--primary-colour-light);
+    }
+
+    :root {
+        --text-colour: #fff;
+        --link-colour: orange;
+        --link-colour-alt: yellow;
+        --primary-colour: orange;
+        --primary-colour-light: dimgrey;
+        --secondary-colour: black;
+        --accent-colour: #2d2d2d;
+    }
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+a {
+    color: var(--primary-colour);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-colour);
+    text-decoration: underline;
+}
